@@ -1,8 +1,35 @@
-body * {
-    border: solid 1px black;
+:root {
+    --accent-green: #3FBD00;
+    --dark-blue: #153243;
+    --med-blue: #284B63;
+    --ivory: #F4F9E9;
+    --light-blue: #7EBDC3;
+}
+
+body {
+    font-family: 'Consola', 'Consolab', 'Consolaz', 'Consolai', 'Consolas', 'Courier New', monospace;
+    background-color: var(--ivory);
+    
 }
 
 header {
     text-align: center;
+    background-color: var(--accent-green);
+    align-items: center;
+}
+
+header a:link,
+header a:visited {
     text-decoration: none;
+    color: var(--ivory);
+}
+
+header h1 {
+    margin: 0;
+    padding: 20px;
+    
+}
+
+header a:hover {
+    color: rgb(196, 194, 183);
 }
