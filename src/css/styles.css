@@ -1,35 +1,145 @@
 :root {
-    --accent-green: #3FBD00;
-    --dark-blue: #153243;
-    --med-blue: #284B63;
+    --accent-green: #49da00;
+    --dark-blue: #0f2531;
+    --med-blue: #284b63;
     --ivory: #F4F9E9;
-    --light-blue: #7EBDC3;
+    --light-blue: #5cbbc4;
 }
 
 body {
     font-family: 'Consola', 'Consolab', 'Consolaz', 'Consolai', 'Consolas', 'Courier New', monospace;
+    margin: 0;
+    padding: 0;
     background-color: var(--ivory);
-    
+    color: var(--dark-blue);
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-columns: 1fr;
+    min-height: 100vh;
 }
 
 header {
     text-align: center;
-    background-color: var(--accent-green);
-    align-items: center;
-}
-
-header a:link,
-header a:visited {
-    text-decoration: none;
-    color: var(--ivory);
+    background: linear-gradient(var(--accent-green), var(--light-blue));
+    color: #ffffff;
+    padding: 12px 0;
 }
 
 header h1 {
     margin: 0;
-    padding: 20px;
-    
+    font-size: 2.5rem;
 }
 
-header a:hover {
-    color: rgb(196, 194, 183);
+header a{
+    text-decoration: none;
+    color: #ffffff;
+}
+nav {
+    border-bottom: #000000 2px solid;
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: var(--light-blue);
+    padding: 10px 4px;
+}
+
+nav a {
+    color: var(--dark-blue);
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: black;
+}
+
+
+main {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-gap: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.content-title {
+    background-image: url(../images/home-hero.jpg);
+    background-size: cover; /* Ensures the image covers the area */
+    background-position: center; /* Centers the image */
+    color: white;
+    padding: 130px 20px; /* Adds some padding around the text */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds text shadow for better readability */
+    border-radius: 5px;
+}
+
+
+
+.content-title h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.content-title h2 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+.content {
+    background-color: white;
+    border: 1px solid var(--light-blue);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.cta ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.cta ul a{
+    color: var(--med-blue);
+}
+
+hr {
+    margin: 26px 100px;
+}
+
+footer {
+    background-color: var(--med-blue);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: var(--light-blue);
+}
+
+footer a:hover,
+footer a:visited {
+    color: var(--dark-blue);
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .content-title h1 {
+        font-size: 1.8rem;
+    }
+
+    .content-title h2 {
+        font-size: 1.2rem;
+    }
 }
