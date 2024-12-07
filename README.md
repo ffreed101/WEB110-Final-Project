@@ -1,5 +1,8 @@
 # WEB110-Final-Project
 
+## Topic
+### *How do social media algorithms shape the designs and content strategies of websites seeking to maximize engagement?*
+
 ## Grading Criteria
 
 - Five (5) pages (at least), including:
